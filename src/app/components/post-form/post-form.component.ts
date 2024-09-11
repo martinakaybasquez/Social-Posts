@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-post-form',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './post-form.component.css'
 })
 export class PostFormComponent {
+  @Input() display:boolean = false;
 
+  @Output() Submitted = new EventEmitter<Post>();
+
+  submitPost(){
+    // this.Submitted.emit(this.Pos)
+  }
 }

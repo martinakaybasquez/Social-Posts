@@ -18,4 +18,7 @@ export class SocialPostsComponent {
     {title: "MY BACK HURTS", thought: "I think I have a herniated disk because this stupid dining chair"},
   ];
 
+  onSubmit(p:Post){
+    this.AllPosts.push(p);
+  }
 }

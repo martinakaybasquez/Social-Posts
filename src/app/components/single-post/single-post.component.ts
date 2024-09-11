@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input, input } from '@angular/core';
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-single-post',
@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './single-post.component.css'
 })
 export class SinglePostComponent {
-
+  @Input() Posted: Post = {} as Post;
 }
