@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Post } from '../../models/post';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-post-form',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './post-form.component.html',
   styleUrl: './post-form.component.css'
 })
@@ -13,7 +14,10 @@ export class PostFormComponent {
 
   @Output() Submitted = new EventEmitter<Post>();
 
+  canadianBacon:Post = {} as Post;
+
   submitPost(){
-    // this.Submitted.emit(this.Pos)
+    let result:Post = {...this.canadianBacon}
+    this.Submitted.emit(result)
   }
 }

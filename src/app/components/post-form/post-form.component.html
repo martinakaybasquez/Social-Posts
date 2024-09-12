@@ -1,1 +1,5 @@
-<p>post-form works!</p>
+<p> Title  {{canadianBacon.title}}</p>
+<input placeholder="title" name="title" type="text" [(ngModel)]="canadianBacon.title"/>
+<button (click)="submitPost()">Submit</button>
+<p> Thought </p>
+<input placeholder="thought" name="thought" type="text" [(ngModel)]="canadianBacon.thought"/>

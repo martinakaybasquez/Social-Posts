@@ -1,0 +1,7 @@
+<!-- template -->
+
+@for (post of AllPosts; track $index) {
+    <app-single-post [Posted]="post"></app-single-post>  
+}
+
+<app-post-form (Submitted)="onSubmit($event)"></app-post-form>
